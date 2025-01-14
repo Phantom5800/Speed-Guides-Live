@@ -53,7 +53,7 @@ namespace LiveSplit.SpeedGuidesLive
                     img{{max-width:100%;}}
                     pre{{word-wrap:break-word;}}
                 </style></head><body>
-                    {Markdown.ToHtml(HttpUtility.HtmlEncode(EditorText), m_markdownRenderer)}
+                    {Markdown.ToHtml(EditorText, m_markdownRenderer)}
                 </body></html>");
         }
 

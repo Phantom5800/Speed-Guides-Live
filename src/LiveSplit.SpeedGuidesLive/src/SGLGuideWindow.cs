@@ -2,6 +2,7 @@
 using LiveSplit.UI;
 using LiveSplit.UI.Components;
 using Markdig;
+using Markdig.Parsers;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -200,7 +201,7 @@ namespace LiveSplit.SpeedGuidesLive
             {
                 if (m_component.Settings.MarkdownEnabled)
                 {
-                    notes = Markdown.ToHtml(HttpUtility.HtmlEncode(text), m_markdownRenderer);
+                    notes = Markdown.ToHtml(text, m_markdownRenderer);
                 }
                 else
                 {
